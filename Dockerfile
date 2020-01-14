@@ -22,8 +22,6 @@ RUN jupyter labextension install jupyterlab-nvdashboard
 
 RUN jupyter lab build
 
-RUN mkdir /sentence-classification
-
-COPY . /sentence-classification
+RUN cd / && git clone https://github.com/ericharper/sentence-classification.git
 
 WORKDIR /sentence-classification
